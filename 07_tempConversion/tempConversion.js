@@ -1,18 +1,9 @@
 const convertToCelsius = function(tempFahrenheit) {
-  let result = (tempFahrenheit - 32) * 5 / 9;
-  return +roundDecimalPlaces(result, 1);
+  return Math.round (((tempFahrenheit - 32) * 5 / 9) * 10) / 10
 };
 
-function roundDecimalPlaces (num, decimalPlaces) {
-  if (Math.floor(num) !== num) {
-    num = num.toFixed(decimalPlaces);
-  }
-  return +num;
-}
-
 const convertToFahrenheit = function(tempCelsius) {
-  let result = tempCelsius* 9 / 5 + 32;
-  return +roundDecimalPlaces(result, 1);
+  return Math.round ((tempCelsius * 9 / 5 + 32) * 10) / 10;
 };
 
 // Do not edit below this line
